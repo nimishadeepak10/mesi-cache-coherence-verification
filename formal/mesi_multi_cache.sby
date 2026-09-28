@@ -1,0 +1,15 @@
+[options]
+mode prove
+depth 20
+expect pass
+
+[engines]
+smtbmc
+
+[script]
+read -formal mesi_multi_cache.v mesi_cache_core.v
+prep -top mesi_multi_cache
+
+[files]
+../rtl/mesi_multi_cache.v
+../rtl/mesi_cache_core.v
